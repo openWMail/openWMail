@@ -4,7 +4,7 @@
   "prerelease": true,
   "description": "The missing desktop client for Gmail and Google Inbox",
   "scripts": {
-    "prestart": "node -e 'console.log(\"\\033[31mWMail is now licensed under MPL2.0. More information available in package.json\\033[0m\")' && webpack",
+    "prestart": "webpack",
     "start": "electron bin/app/index.js",
     "test": "standard",
     "package:darwin": "node packager --platform=darwin",
@@ -46,7 +46,7 @@
     "electron": "1.6.1",
     "electron-packager": "8.5.1",
     "extract-text-webpack-plugin": "1.0.1",
-    "file-loader": "0.9.0",
+    "file-loader": "0.10.0",
     "json-loader": "0.5.4",
     "jsx-loader": "0.13.2",
     "less": "2.7.2",

@@ -189,6 +189,13 @@ module.exports = React.createClass({
           ipcRenderer.send('toggle-mailbox-visibility-from-tray')
         }
       },
+      {
+        label: 'WMail News',
+        click: (e) => {
+          navigationDispatch.openNews()
+          ipcRenderer.send('focus-app', { })
+        }
+      },
       { type: 'separator' },
       {
         label: 'Quit',
