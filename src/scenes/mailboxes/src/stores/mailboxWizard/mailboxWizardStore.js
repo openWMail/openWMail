@@ -6,6 +6,10 @@ const reporter = require('../../reporter')
 const mailboxActions = require('../mailbox/mailboxActions')
 const googleActions = require('../google/googleActions')
 const googleHTTP = require('../google/googleHTTP')
+<<<<<<< HEAD
+const pkg = window.appPackage()
+=======
+>>>>>>> master
 
 class MailboxWizardStore {
   /* **************************************************************************/
@@ -165,7 +169,6 @@ class MailboxWizardStore {
         this.configurationOpen = true
         this.emitChange()
       }
-
     }).catch((err) => {
       console.error('[AUTH ERR]', err)
       console.error(err.errorString)
@@ -193,7 +196,13 @@ class MailboxWizardStore {
 
   handleConfigureMailbox ({ configuration }) {
     this.provisionalJS = Object.assign(this.provisionalJS, configuration)
-    this.configureServicesOpen = true
+    if (pkg.prerelease) {
+      this.configureServicesOpen = true
+    } else {
+      this.createMailbox()
+      this.completeClear()
+      this.configurationCompleteOpen = true
+    }
   }
 
   handleConfigureServices ({ enabledServices, compact }) {

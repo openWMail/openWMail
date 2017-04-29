@@ -6,6 +6,7 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ThomasBeverley)
 
+# Introducing Wavebox
 
 The missing desktop client for Gmail & Google Inbox. Bringing the Gmail & Google Inbox experience to your desktop in a neatly packaged app
 
@@ -17,8 +18,7 @@ The missing desktop client for Gmail & Google Inbox. Bringing the Gmail & Google
 
 [Find out how you can contribute](https://github.com/Thomas101/wmail/wiki/Contributing)
 
-![Screenshot](https://raw.githubusercontent.com/Thomas101/wmail/master/.github/screenshot.png "Screenshot")
-
+---
 
 ### Building from source
 
@@ -63,5 +63,3 @@ npm rebuild
 npm run-script package
 ```
 
-
-Made with ♥ by Thomas Beverley. [Buy me a beer](https://www.paypal.me/ThomasBeverley) &#127866;
