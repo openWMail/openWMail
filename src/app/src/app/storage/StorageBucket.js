@@ -71,9 +71,9 @@ class StorageBucket {
         return
       } else {
         this.__writeLock__ = true
-        writeFileAtomic(this.__path__, JSON.stringify(this.__data__), () => {
+        writeFileAtomic(this.__path__, JSON.stringify(this.__data__), {chown: false}, () => {
           this.__writeLock__ = false
-        })
+        });
       }
     }, DB_WRITE_DELAY_MS)
   }

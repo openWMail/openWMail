@@ -1,5 +1,5 @@
-name: wmail-snap
-version: 2.1.1
+name: openwmail
+version: 1.0.0
 summary: WMail
 description: WMail
 confinement: strict

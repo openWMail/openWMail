@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=WMail
 Comment=WMail Email
-Exec=wmail-snap.wmail
+Exec=openwmail.wmail
 Terminal=false
 Type=Application
 Icon=${SNAP}/meta/gui/app.png
