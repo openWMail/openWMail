@@ -8,4 +8,8 @@ WMail-linux-x64/
 WMail-win32-ia32/
 WMail-win32-x64/
 WMail-win32-ia32-Installer/
+parts
+prime
+stage
+*.snap
 *.log

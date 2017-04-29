@@ -6,7 +6,10 @@ const reporter = require('../../reporter')
 const mailboxActions = require('../mailbox/mailboxActions')
 const googleActions = require('../google/googleActions')
 const googleHTTP = require('../google/googleHTTP')
+<<<<<<< HEAD
 const pkg = window.appPackage()
+=======
+>>>>>>> master
 
 class MailboxWizardStore {
   /* **************************************************************************/
@@ -150,6 +153,7 @@ class MailboxWizardStore {
 
   handleAuthGoogleMailboxSuccess ({ provisionalId, type, temporaryAuth, mode }) {
     googleHTTP.upgradeAuthCodeToPermenant(temporaryAuth).then((auth) => {
+
       if (mode === 'reauthenticate') {
         mailboxActions.setGoogleAuth.defer(provisionalId, auth)
         googleActions.syncMailboxProfile.defer(provisionalId)
