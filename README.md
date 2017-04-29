@@ -63,5 +63,3 @@ npm rebuild
 npm run-script package
 ```
 
-
-Made with ♥ by Thomas Beverley. [Buy me a beer](https://www.paypal.me/ThomasBeverley) &#127866;
