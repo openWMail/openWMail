@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WMail
+Comment=WMail Email
+Exec=wmail
+Terminal=false
+Type=Application
+Icon=${SNAP}/meta/gui/app.png
+Categories=GNOME;GTK;Network
+StartupWMClass=WMail
