@@ -29,7 +29,7 @@ class Distribution {
 
     return new Promise((resolve, reject) => {
       const task = TaskLogger.start('OSX DMG')
-      const filename = `WMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_osx.dmg`
+      const filename = `openWMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_osx.dmg`
       const distPath = path.join(ROOT_PATH, 'dist')
       const targetPath = path.join(distPath, filename)
       fs.mkdirsSync(distPath)
@@ -41,7 +41,7 @@ class Distribution {
         target: targetPath,
         basepath: ROOT_PATH,
         specification: {
-          title: `WMail ${pkg.version} ${pkg.prerelease ? 'Prerelease' : ''}`,
+          title: `openWMail ${pkg.version} ${pkg.prerelease ? 'Prerelease' : ''}`,
           format: 'UDBZ',
           icon: 'assets/icons/app.icns',
           'background-color': '#CCCCCC',
@@ -51,11 +51,11 @@ class Distribution {
             size: { width: 600, height: 500 }
           },
           contents: [
-            { x: 150, y: 100, type: 'file', path: 'WMail-darwin-x64/WMail.app' },
+            { x: 150, y: 100, type: 'file', path: 'openWMail-darwin-x64/openWMail.app' },
             { x: 450, y: 100, type: 'link', path: '/Applications' },
-            { x: 150, y: 400, type: 'file', path: 'WMail-darwin-x64/First Run.html' },
-            { x: 300, y: 400, type: 'file', path: 'WMail-darwin-x64/LICENSE' },
-            { x: 450, y: 400, type: 'file', path: 'WMail-darwin-x64/vendor-licenses' }
+            { x: 150, y: 400, type: 'file', path: 'openWMail-darwin-x64/First Run.html' },
+            { x: 300, y: 400, type: 'file', path: 'openWMail-darwin-x64/LICENSE' },
+            { x: 450, y: 400, type: 'file', path: 'openWMail-darwin-x64/vendor-licenses' }
           ]
         }
       })
@@ -81,11 +81,11 @@ class Distribution {
       const task = TaskLogger.start(`Windows MSI Prep (${arch})`)
 
       // Pre-calc all the needed paths
-      const filename = `WMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_windows_${ARCH_FILENAME[arch]}`
+      const filename = `openWMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_windows_${ARCH_FILENAME[arch]}`
       const distPath = path.join(ROOT_PATH, 'dist')
-      const builtPath = path.join(ROOT_PATH, arch === ARCH.X64 ? 'WMail-win32-x64' : 'WMail-win32-ia32')
+      const builtPath = path.join(ROOT_PATH, arch === ARCH.X64 ? 'openWMail-win32-x64' : 'openWMail-win32-ia32')
       const targetPath = path.join(distPath, filename)
-      const aipName = `WMail_${ARCH_FILENAME[arch]}.aip`
+      const aipName = `openWMail_${ARCH_FILENAME[arch]}.aip`
       const aipPath = path.join(__dirname, 'msi', aipName)
 
       // Clean-up old & Copy across
@@ -134,10 +134,10 @@ class Distribution {
     return new Promise((resolve, reject) => {
       const task = TaskLogger.start(`Windows MSI Finalise (${arch})`)
 
-      const filename = `WMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_windows_${ARCH_FILENAME[arch]}`
+      const filename = `openWMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_windows_${ARCH_FILENAME[arch]}`
       const distPath = path.join(ROOT_PATH, 'dist')
       const prepPath = path.join(distPath, filename)
-      const setupFilesPath = `WMail_${ARCH_FILENAME[arch]}-SetupFiles`
+      const setupFilesPath = `openWMail_${ARCH_FILENAME[arch]}-SetupFiles`
 
       const msiPath = path.join(prepPath, setupFilesPath, filename + '.msi')
       const outputPath = path.join(distPath, filename + '.msi')
@@ -160,9 +160,9 @@ class Distribution {
     return new Promise((resolve, reject) => {
       const task = TaskLogger.start(`Linux tar (${arch})`)
 
-      const filename = `WMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_linux_${ARCH_FILENAME[arch]}.tar.gz`
+      const filename = `openWMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_linux_${ARCH_FILENAME[arch]}.tar.gz`
       const targetPath = path.join(ROOT_PATH, 'dist', filename)
-      const builtDirectory = arch === ARCH.X64 ? 'WMail-linux-x64' : 'WMail-linux-ia32'
+      const builtDirectory = arch === ARCH.X64 ? 'openWMail-linux-x64' : 'openWMail-linux-ia32'
 
       if (fs.existsSync(targetPath)) {
         fs.removeSync(targetPath)
@@ -191,8 +191,8 @@ class Distribution {
   static distributeLinuxDeb (pkg, arch) {
     const ARCH_MAPPING = { x86: 'i386', x64: 'amd64' }
     const CWD_MAPPING = {
-      x86: path.join(ROOT_PATH, 'WMail-linux-ia32'),
-      x64: path.join(ROOT_PATH, 'WMail-linux-x64')
+      x86: path.join(ROOT_PATH, 'openWMail-linux-ia32'),
+      x64: path.join(ROOT_PATH, 'openWMail-linux-x64')
     }
 
     return new Promise((resolve, reject) => {
@@ -201,7 +201,7 @@ class Distribution {
       debianInstaller().pack({
         'package': pkg,
         info: {
-          name: 'wmail-desktop',
+          name: 'openwmail',
           arch: ARCH_MAPPING[arch],
           depends: [
             'lsb-base (>= 3.2)',
@@ -213,15 +213,15 @@ class Distribution {
           }
         }
       }, [
-        { cwd: CWD_MAPPING[arch], expand: true, src: ['./**'], dest: '/opt/wmail-desktop' },
-        { cwd: CWD_MAPPING[arch], src: ['./wmail.desktop'], dest: '/usr/share/applications' }
+        { cwd: CWD_MAPPING[arch], expand: true, src: ['./**'], dest: '/opt/openwmail' },
+        { cwd: CWD_MAPPING[arch], src: ['./openwmail.desktop'], dest: '/usr/share/applications' }
       ], function (err) {
         if (err) {
           task.fail()
           reject(err)
         } else {
-          const outputFilename = `wmail-desktop_${pkg.version}-1_${ARCH_MAPPING[arch]}.deb`
-          const filename = `WMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_linux_${ARCH_FILENAME[arch]}.deb`
+          const outputFilename = `openwmail_${pkg.version}-1_${ARCH_MAPPING[arch]}.deb`
+          const filename = `openWMail_${pkg.version.replace(/\./g, '_')}${pkg.prerelease ? '_prerelease' : ''}_linux_${ARCH_FILENAME[arch]}.deb`
           fs.move(path.join(ROOT_PATH, 'dist', outputFilename), path.join(ROOT_PATH, 'dist', filename), { clobber: true }, (err) => {
             if (err) {
               task.fail()

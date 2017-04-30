@@ -12,13 +12,13 @@ class ReleaseAssets {
   static copyAssetsIntoReleases (platforms) {
     const platformsSet = new Set(platforms)
     if (platformsSet.has('darwin')) {
-      fs.copySync(path.join(__dirname, 'dmg/First Run.html'), path.join(ROOT_PATH, 'WMail-darwin-x64/First Run.html'))
+      fs.copySync(path.join(__dirname, 'dmg/First Run.html'), path.join(ROOT_PATH, 'openWMail-darwin-x64/First Run.html'))
     }
     if (platformsSet.has('linux')) {
-      fs.copySync(path.join(ROOT_PATH, 'assets/icons/app.png'), path.join(ROOT_PATH, 'WMail-linux-ia32/icon.png'))
-      fs.copySync(path.join(ROOT_PATH, 'assets/icons/app.png'), path.join(ROOT_PATH, 'WMail-linux-x64/icon.png'))
-      fs.copySync(path.join(__dirname, 'linux/wmail.desktop'), path.join(ROOT_PATH, 'WMail-linux-ia32/wmail.desktop'))
-      fs.copySync(path.join(__dirname, 'linux/wmail.desktop'), path.join(ROOT_PATH, 'WMail-linux-x64/wmail.desktop'))
+      fs.copySync(path.join(ROOT_PATH, 'assets/icons/app.png'), path.join(ROOT_PATH, 'openWMail-linux-ia32/icon.png'))
+      fs.copySync(path.join(ROOT_PATH, 'assets/icons/app.png'), path.join(ROOT_PATH, 'openWMail-linux-x64/icon.png'))
+      fs.copySync(path.join(__dirname, 'linux/openwmail.desktop'), path.join(ROOT_PATH, 'openWMail-linux-ia32/openwmail.desktop'))
+      fs.copySync(path.join(__dirname, 'linux/openwmail.desktop'), path.join(ROOT_PATH, 'openWMail-linux-x64/openwmail.desktop'))
     }
 
     return Promise.resolve()

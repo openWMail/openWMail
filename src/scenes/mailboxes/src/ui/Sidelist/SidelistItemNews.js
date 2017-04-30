@@ -63,7 +63,7 @@ module.exports = React.createClass({
       <div
         {...passProps}
         style={Object.assign({}, styles.newsItemContainer, style)}
-        data-tip='WMail News'
+        data-tip='openWMail News'
         data-for='ReactComponent-Sidelist-Item-News'>
         <IconButton
           iconClassName='fa fa-fw fa-newspaper-o'

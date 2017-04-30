@@ -190,7 +190,7 @@ module.exports = React.createClass({
         }
       },
       {
-        label: 'WMail News',
+        label: 'openWMail News',
         click: (e) => {
           navigationDispatch.openNews()
           ipcRenderer.send('focus-app', { })

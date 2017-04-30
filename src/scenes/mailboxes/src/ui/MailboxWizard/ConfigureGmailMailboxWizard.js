@@ -62,7 +62,7 @@ module.exports = React.createClass({
     renderTitle () {
       return (
         <div style={styles.introduction}>
-          Pick the type of inbox that you use in Gmail to configure WMail
+          Pick the type of inbox that you use in Gmail to configure openWMail
           notifications and unread counters
         </div>
       )

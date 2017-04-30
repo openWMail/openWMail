@@ -54,7 +54,7 @@ module.exports = React.createClass({
         onRequestClose={() => appWizardActions.cancelWizard()}>
         <div style={{textAlign: 'center'}}>
           <p>
-            Would you like to make WMail your default mail client?
+            Would you like to make openWMail your default mail client?
             <br />
             <small>You can always change this later</small>
           </p>

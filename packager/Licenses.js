@@ -79,13 +79,13 @@ class Licenses {
       .then((npmLicenseString) => {
         return Promise.all(platforms.reduce((acc, platform) => {
           if (platform === 'darwin') {
-            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'WMail-darwin-x64/'), npmLicenseString))
+            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'openWMail-darwin-x64/'), npmLicenseString))
           } else if (platform === 'linux') {
-            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'WMail-linux-ia32/'), npmLicenseString))
-            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'WMail-linux-x64/'), npmLicenseString))
+            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'openWMail-linux-ia32/'), npmLicenseString))
+            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'openWMail-linux-x64/'), npmLicenseString))
           } else if (platform === 'win32') {
-            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'WMail-win32-ia32/'), npmLicenseString))
-            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'WMail-win32-x64/'), npmLicenseString))
+            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'openWMail-win32-ia32/'), npmLicenseString))
+            acc.push(Licenses.buildLicenses(path.join(ROOT_PATH, 'openWMail-win32-x64/'), npmLicenseString))
           }
           return acc
         }, []))

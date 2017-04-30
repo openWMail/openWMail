@@ -1,6 +1,6 @@
 {
-  "name": "wmail",
-  "version": "2.1.1",
+  "name": "openwmail",
+  "version": "1.0.0",
   "prerelease": true,
   "description": "The missing desktop client for Gmail and Google Inbox",
   "scripts": {
@@ -22,13 +22,12 @@
   },
   "keywords": [],
   "author": {
-    "name": "Thomas Beverley",
-    "email": "tom.beverley.wmail@gmail.com",
-    "url": "https://github.com/Thomas101/"
+    "name": "OpenWMail Community",
+    "url": "https://github.com/openwmail/"
   },
-  "homepage": "https://thomas101.github.io/wmail/",
+  "homepage": "https://github.com/openwmail/openwmail",
   "license": "MPL-2.0",
-  "repository": "https://github.com/Thomas101/wmail",
+  "repository": "https://github.com/openwmail/openwmail",
   "main": "bin/app/index.js",
   "optionalDependencies": {
     "appdmg": "0.4.5"

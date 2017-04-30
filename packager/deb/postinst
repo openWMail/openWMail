@@ -1,4 +1,4 @@
-sudo chmod 755 /opt/wmail-desktop/WMail
+sudo chmod 755 /opt/openwmail/openWMail
 if command -v desktop-file-install 2>/dev/null; then
-  sudo desktop-file-install /usr/share/applications/wmail.desktop --rebuild-mime-info-cache
+  sudo desktop-file-install /usr/share/applications/openwmail.desktop --rebuild-mime-info-cache
 fi

@@ -121,7 +121,7 @@ class ContextMenu {
 
     // WMail
     menuTemplate.push({
-      label: 'WMail Settings',
+      label: 'openWMail Settings',
       click: () => { ipcRenderer.sendToHost({ type: 'open-settings' }) }
     })
     menuTemplate.push({
