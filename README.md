@@ -2,6 +2,7 @@
 
 An always free, always open-source fork of [wmail](https://github.com/Thomas101/wmail) maintained by a volunteer community.
 
+[![Rocket.Chat](https://openwmail.rocket.chat/api/v1/shield.svg?type=channel&channel=general)](https://openwmail.rocket.chat/channel/general)
 [![Download](https://img.shields.io/github/downloads/openWMail/openWMail/total.svg)](https://github.com/openWMail/openWMail/releases)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
