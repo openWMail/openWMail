@@ -1,23 +1,17 @@
-# WMail
+# openWMail
 
-[![Join the chat at https://gitter.im/wmail-desktop/Lobby](https://badges.gitter.im/wmail-desktop/Lobby.svg)](https://gitter.im/wmail-desktop/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Download](https://img.shields.io/github/downloads/Thomas101/wmail/total.svg)](https://github.com/Thomas101/wmail/releases)
-[![Travis Build Status](https://img.shields.io/travis/Thomas101/wmail.svg)](http://travis-ci.org/Thomas101/wmail)
+An always free, always open-source fork of [wmail](https://github.com/Thomas101/wmail) maintained by a volunteer community.
+
+[![Download](https://img.shields.io/github/downloads/openWMail/openWMail/total.svg)](https://github.com/openWMail/openWMail/releases)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ThomasBeverley)
-
 
 The missing desktop client for Gmail & Google Inbox. Bringing the Gmail & Google Inbox experience to your desktop in a neatly packaged app
 
-[Download the latest release](http://thomas101.github.io/wmail/download)
+[Download releases](https://github.com/openWMail/openWMail/releases) (all platforms)
 
-[View all releases](https://github.com/Thomas101/wmail/releases)
+[Raise an issue or request a feature](https://github.com/openWMail/openWMail/issues)
 
-[Raise an issue or request a feature](https://github.com/Thomas101/wmail/issues)
-
-[Find out how you can contribute](https://github.com/Thomas101/wmail/wiki/Contributing)
-
-![Screenshot](https://raw.githubusercontent.com/Thomas101/wmail/master/.github/screenshot.png "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/openWMail/openWMail/master/.github/screenshot.png "Screenshot")
 
 
 ### Building from source
@@ -31,10 +25,10 @@ You'll need to [setup your OAuth Client ID](https://console.developers.google.co
 To create OAuth client ID & secret, under "API Manager", choose "Create Credentials", then "OAuth client ID".
 For "Application type", select "Other", and choose some name for the application, as described in these screenshots:
 
-![Create credentials](https://raw.githubusercontent.com/Thomas101/wmail/master/.github/gdc-create-credentials.png "Create Credentials")
+![Create credentials](https://raw.githubusercontent.com/openWMail/openWMail/master/.github/gdc-create-credentials.png "Create Credentials")
 <br />
 <br />
-![Create OAuth client ID](https://raw.githubusercontent.com/Thomas101/wmail/master/.github/gdc-oauth-client-id-creation.png "Create OAuth Client ID")
+![Create OAuth client ID](https://raw.githubusercontent.com/openWMail/openWMail/master/.github/gdc-oauth-client-id-creation.png "Create OAuth Client ID")
 
 Next create `src/shared/credentials.js` with your Google client ID and secret like so...
 
