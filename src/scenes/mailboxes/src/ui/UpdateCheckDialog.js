@@ -69,15 +69,15 @@ module.exports = React.createClass({
           }
         }
 
-        if (pkg.prerelease) {
-          if (res.prerelease.news) {
-            settingsActions.updateLatestNews(res.prerelease.news)
-          }
-        } else {
-          if (res.release.news) {
-            settingsActions.updateLatestNews(res.release.news)
-          }
-        }
+        // if (pkg.prerelease) {
+        //   if (res.prerelease.news) {
+        //     settingsActions.updateLatestNews(res.prerelease.news)
+        //   }
+        // } else {
+        //   if (res.release.news) {
+        //     settingsActions.updateLatestNews(res.release.news)
+        //   }
+        // }
 
         if (update) {
           if (this.state.recheckRestart || settingsStore.getState().app.checkForUpdates === false) {
