@@ -64,11 +64,11 @@ module.exports = React.createClass({
         <a
           style={{color: Colors.blue700, fontSize: '85%', marginBottom: 10, display: 'block'}}
           onClick={(evt) => { evt.preventDefault(); shell.openExternal(WEB_URL) }}
-          href={WEB_URL}>WMail Website</a>
+          href={WEB_URL}>openWMail Website</a>
         <a
           style={{color: Colors.blue700, fontSize: '85%', marginBottom: 10, display: 'block'}}
           onClick={(evt) => { evt.preventDefault(); shell.openExternal(GITHUB_URL) }}
-          href={GITHUB_URL}>WMail GitHub</a>
+          href={GITHUB_URL}>openWMail GitHub</a>
         <a
           style={{color: Colors.blue700, fontSize: '85%', marginBottom: 10, display: 'block'}}
           onClick={(evt) => { evt.preventDefault(); shell.openExternal(GITHUB_ISSUE_URL) }}
@@ -82,7 +82,7 @@ module.exports = React.createClass({
             {`Version ${pkg.version} ${pkg.prerelease ? 'Prerelease' : ''}`}
           </p>
           <p>
-            Made with ♥ by Thomas Beverley
+            Made with ♥ by the openWMail Community
           </p>
         </div>
       </Paper>

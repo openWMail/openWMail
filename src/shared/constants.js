@@ -1,15 +1,15 @@
 module.exports = Object.freeze({
-  APP_ID: 'tombeverley.wmail',
+  APP_ID: 'openwmail.openwmail',
 
   MAILBOX_INDEX_KEY: '__index__',
   MAILBOX_SLEEP_WAIT: 1000 * 30, // 30 seconds
 
-  WEB_URL: 'https://thomas101.github.io/wmail/',
-  GITHUB_URL: 'https://github.com/Thomas101/wmail/',
-  GITHUB_ISSUE_URL: 'https://github.com/Thomas101/wmail/issues',
-  UPDATE_DOWNLOAD_URL: 'http://thomas101.github.io/wmail/download',
+  WEB_URL: 'https://github.com/openwmail/openwmail/',
+  GITHUB_URL: 'https://github.com/openwmail/openwmail/',
+  GITHUB_ISSUE_URL: 'https://github.com/openwmail/openwmail/issues',
+  UPDATE_DOWNLOAD_URL: 'https://github.com/openwmail/openwmail/releases',
   UPDATE_CHECK_URL: 'http://geekgonecrazy.com/misc/wmail/version.json',
-  PRIVACY_URL: 'https://thomas101.github.io/wmail/privacy',
+  PRIVACY_URL: 'https://github.com/openWMail/openWMail/wiki/Privacy-Policy',
   USER_SCRIPTS_WEB_URL: 'https://github.com/Thomas101/wmail-user-scripts',
   UPDATE_CHECK_INTERVAL: 1000 * 60 * 60 * 24, // 24 hours
 

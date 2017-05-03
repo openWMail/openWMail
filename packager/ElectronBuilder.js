@@ -36,11 +36,11 @@ class ElectronBuilder {
       '/webpack.config.js',
 
       // Output folders
-      '/WMail-linux-ia32',
-      '/WMail-linux-x64',
-      '/WMail-win32-ia32',
-      '/WMail-win32-x64',
-      '/WMail-darwin-x64'
+      '/openWMail-linux-ia32',
+      '/openWMail-linux-x64',
+      '/openWMail-win32-ia32',
+      '/openWMail-win32-x64',
+      '/openWMail-darwin-x64'
     ]
 
     // Spellchecker
@@ -69,11 +69,11 @@ class ElectronBuilder {
     return new Promise((resolve, reject) => {
       packager({
         dir: ROOT_PATH,
-        name: 'WMail',
+        name: 'openWMail',
         platform: platform,
         arch: arch,
         version: pkg.dependencies['electron-prebuilt'],
-        'app-bundle-id': 'tombeverley.wmail',
+        'app-bundle-id': 'openwmail.openwmail',
         'app-version': pkg.version,
         'app-copyright': 'Copyright ' + pkg.author + '(' + pkg.license + ' License)',
         icon: path.join(ROOT_PATH, 'assets/icons/app'),
@@ -84,7 +84,7 @@ class ElectronBuilder {
           CompanyName: pkg.author,
           FileDescription: pkg.description,
           OriginalFilename: pkg.name,
-          ProductName: 'WMail'
+          ProductName: 'openWMail'
         },
         'extend-info': {
           'CFBundleURLSchemes': ['mailto']

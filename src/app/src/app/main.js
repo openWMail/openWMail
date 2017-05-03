@@ -130,7 +130,7 @@
         message: pkg.name,
         detail: [
           'Version: ' + pkg.version + (pkg.prerelease ? ' prerelease' : ''),
-          'Made with ♥ by Thomas Beverley.'
+          'Made with ♥ by openWMail Community.'
         ].join('\n'),
         buttons: [ 'Done', 'Website' ]
       }, (index) => {

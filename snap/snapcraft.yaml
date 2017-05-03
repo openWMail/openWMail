@@ -1,13 +1,13 @@
 name: openwmail
 version: 1.0.0
-summary: WMail
-description: WMail
+summary: openWMail
+description: openWMail
 confinement: strict
 grade: stable
 icon: snap/gui/app.png
 apps:
-  wmail:
-    command: env TMPDIR=$XDG_RUNTIME_DIR desktop-launch $SNAP/WMail
+  openwmail:
+    command: env TMPDIR=$XDG_RUNTIME_DIR desktop-launch $SNAP/openWMail
     plugs:
       - home
       - x11
@@ -30,6 +30,6 @@ parts:
       - gconf2
       - libasound2
       - pulseaudio
-    source: WMail-linux-x64
+    source: openWMail-linux-x64
     after:
       - desktop-glib-only

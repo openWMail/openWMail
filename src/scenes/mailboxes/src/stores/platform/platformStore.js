@@ -10,7 +10,7 @@ const WIN32_SHORTCUT_PATH = (() => {
   if (process.platform === 'win32') {
     const appdata = remote.getGlobal('process').env.APPDATA
     if (appdata) {
-      return path.join(appdata, 'Microsoft\\Windows\\Start Menu\\Programs\\Startup\\WMail.lnk')
+      return path.join(appdata, 'Microsoft\\Windows\\Start Menu\\Programs\\Startup\\openWMail.lnk')
     } else {
       return undefined
     }
