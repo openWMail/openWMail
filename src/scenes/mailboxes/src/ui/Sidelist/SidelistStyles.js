@@ -130,31 +130,4 @@ module.exports = {
     borderStyle: 'solid',
     cursor: 'pointer'
   },
-
-  /**
-  * News Item
-  */
-  newsItemContainer: {
-    position: 'relative',
-    textAlign: 'center'
-  },
-  newsBadge: {
-    backgroundColor: 'rgba(238, 54, 55, 0.95)',
-    color: Colors.red50,
-    fontWeight: '100',
-    width: 'auto',
-    minWidth: 24,
-    paddingLeft: 4,
-    paddingRight: 4,
-    borderRadius: 12,
-    WebkitUserSelect: 'none',
-    cursor: 'pointer'
-  },
-  newsBadgeContainer: {
-    position: 'absolute',
-    top: -3,
-    right: 3,
-    cursor: 'pointer',
-    zIndex: 2
-  }
 }

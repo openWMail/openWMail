@@ -3,7 +3,6 @@ const SidelistMailboxes = require('./SidelistMailboxes')
 const SidelistItemAddMailbox = require('./SidelistItemAddMailbox')
 const SidelistItemSettings = require('./SidelistItemSettings')
 const SidelistItemWizard = require('./SidelistItemWizard')
-const SidelistItemNews = require('./SidelistItemNews')
 const { settingsStore } = require('../../stores/settings')
 const styles = require('./SidelistStyles')
 const shallowCompare = require('react-addons-shallow-compare')
@@ -36,19 +35,13 @@ module.exports = React.createClass({
     const settingsState = settingsStore.getState()
     return {
       showTitlebar: settingsState.ui.showTitlebar, // purposely don't update this, because effects are only seen after restart
-      showWizard: !settingsState.app.hasSeenAppWizard,
-      showNewsInSidebar: settingsState.news.showNewsInSidebar,
-      hasUnopenedNewsId: settingsState.news.hasUnopenedNewsId,
-      hasUpdateInfo: settingsState.news.hasUpdateInfo
+      showWizard: !settingsState.app.hasSeenAppWizard
     }
   },
 
   settingsUpdated (settingsState) {
     this.setState({
-      showWizard: !settingsState.app.hasSeenAppWizard,
-      showNewsInSidebar: settingsState.news.showNewsInSidebar,
-      hasUnopenedNewsId: settingsState.news.hasUnopenedNewsId,
-      hasUpdateInfo: settingsState.news.hasUpdateInfo
+      showWizard: !settingsState.app.hasSeenAppWizard
     })
   },
 
@@ -61,12 +54,11 @@ module.exports = React.createClass({
   },
 
   render () {
-    const { showTitlebar, showWizard, showNewsInSidebar, hasUnopenedNewsId, hasUpdateInfo } = this.state
+    const { showTitlebar, showWizard, hasUpdateInfo } = this.state
     const isDarwin = process.platform === 'darwin'
     const { style, ...passProps } = this.props
     let extraItems = 0
     extraItems += showWizard ? 1 : 0
-    extraItems += hasUpdateInfo && (showNewsInSidebar || hasUnopenedNewsId) ? 1 : 0
 
     const scrollerStyle = Object.assign({},
       styles.scroller,
@@ -91,7 +83,6 @@ module.exports = React.createClass({
         </div>
         <div style={footerStyle}>
           {showWizard ? (<SidelistItemWizard />) : undefined}
-          {hasUpdateInfo && (showNewsInSidebar || hasUnopenedNewsId) ? (<SidelistItemNews />) : undefined}
           <SidelistItemAddMailbox />
           <SidelistItemSettings />
         </div>
