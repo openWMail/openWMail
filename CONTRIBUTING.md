@@ -1,6 +1,6 @@
 # Raising a new issue & requesting Features
 
-Thanks for being an A* tester and helping to make WMail better by either reporting a bug or raising an issue! Before you create a new issue here are a few things that might be worth checking first...
+Thanks for being an A* tester and helping to make openWMail better by either reporting a bug or raising an issue! Before you create a new issue here are a few things that might be worth checking first...
 
 1. Make sure you're using the [latest version and also check the latest pre-releases](https://github.com/openwmail/openwmail/releases). You may find that your bug has been fixed or feature added in a pre-release. You can find the full list of all releases available to download along with the changelog for each release on the [releases page](https://github.com/openwmail/openwmail/releases)
 
