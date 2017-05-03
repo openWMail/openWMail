@@ -105,7 +105,7 @@ class Distribution {
         const missingAsset = filePaths.find((filePath) => aipContent.indexOf(filePath) === -1)
         if (missingAsset) {
           task.fail()
-          reject('Windows api is missing the following asset: ' + missingAsset)
+          reject('Windows aip is missing the following asset: ' + missingAsset)
           return
         }
 
