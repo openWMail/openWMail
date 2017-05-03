@@ -1,9 +1,9 @@
 {
   "name": "wmail-scenes-mailboxes",
-  "author": "Thomas Beverley",
+  "author": "openWMail Community",
   "license": "MPL-2.0",
-  "repository": "https://github.com/Thomas101/wmail",
-  "description": "The mailboxes window for the WMail app",
+  "repository": "https://github.com/openWMail/openwmail",
+  "description": "The mailboxes window for the openWMail app",
   "dependencies": {
     "addressparser": "1.0.1",
     "alt": "0.18.6",

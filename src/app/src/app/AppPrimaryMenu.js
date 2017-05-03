@@ -101,9 +101,9 @@ class AppPrimaryMenu {
         label: 'Help',
         role: 'help',
         submenu: [
-          { label: 'WMail Website', click: this._selectors.learnMore },
+          { label: 'openWMail Website', click: this._selectors.learnMore },
           { label: 'Privacy', click: this._selectors.privacy },
-          { label: 'WMail on GitHub', click: this._selectors.learnMoreGithub },
+          { label: 'openWMail on GitHub', click: this._selectors.learnMoreGithub },
           { label: 'Report a Bug', click: this._selectors.bugReport }
         ]
       }
