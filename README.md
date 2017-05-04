@@ -16,7 +16,7 @@ The missing desktop client for Gmail & Google Inbox. Bringing the Gmail & Google
 
 ### License
 
-openWMail is licensed under the [MPL 2.0](./LICENSE).
+openWMail, like wmail before it, is licensed under the [Mozilla Public License 2.0](./LICENSE).
 
 ### Building from source
 
