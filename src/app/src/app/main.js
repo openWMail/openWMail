@@ -28,7 +28,6 @@
   }
 
   const argv = require('yargs').parse(process.argv)
-  const AppAnalytics = require('./AppAnalytics')
   const MailboxesWindow = require('./windows/MailboxesWindow')
   const ContentWindow = require('./windows/ContentWindow')
   const pkg = require('../package.json')
@@ -65,8 +64,7 @@
   // Global objects
   /* ****************************************************************************/
 
-  const analytics = new AppAnalytics()
-  const mailboxesWindow = new MailboxesWindow(analytics)
+  const mailboxesWindow = new MailboxesWindow()
   windowManager = new WindowManager(mailboxesWindow)
   const selectors = {
     fullQuit: () => {
@@ -151,10 +149,6 @@
   // IPC Events
   /* ****************************************************************************/
 
-  ipcMain.on('report-error', (evt, body) => {
-    analytics.appException(windowManager.mailboxesWindow.window, 'renderer', body.error)
-  })
-
   ipcMain.on('new-window', (evt, body) => {
     const mailboxesWindow = windowManager.mailboxesWindow
     const copyPosition = !mailboxesWindow.window.isFullScreen() && !mailboxesWindow.window.isMaximized()
@@ -168,7 +162,7 @@
         height: size[1]
       }
     })() : undefined
-    const window = new ContentWindow(analytics)
+    const window = new ContentWindow()
     windowManager.addContentWindow(window)
     window.start(body.url, body.partition, windowOptions)
   })
@@ -250,7 +244,6 @@
 
   // Send crash reports
   process.on('uncaughtException', (err) => {
-    analytics.appException(windowManager.mailboxesWindow.window, 'main', err)
     console.error(err)
     console.error(err.stack)
   })

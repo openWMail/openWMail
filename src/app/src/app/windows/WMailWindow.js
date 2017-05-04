@@ -15,9 +15,8 @@ class WMailWindow extends EventEmitter {
   * @param options: object containing the following
   *                   @param screenLocationNS: the namespace to save the window state under. If not set, will not persist
   */
-  constructor (analytics, options) {
+  constructor (options) {
     super()
-    this.analytics = analytics
     this.window = null
     this.windowScreenLocationSaver = null
     this.options = Object.freeze(Object.assign({}, options))
