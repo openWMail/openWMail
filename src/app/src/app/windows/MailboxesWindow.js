@@ -19,8 +19,8 @@ class MailboxesWindow extends WMailWindow {
   /**
   * @param analytics: the analytics object
   */
-  constructor (analytics) {
-    super(analytics, {
+  constructor () {
+    super({
       screenLocationNS: 'mailbox_window_state'
     })
     this.heartbeatInterval = null
@@ -60,11 +60,6 @@ class MailboxesWindow extends WMailWindow {
         evt.preventDefault()
       }
     })
-
-    this.analytics.appOpened(this.window)
-    this.heartbeatInterval = setInterval(() => {
-      this.analytics.appHeartbeat(this.window)
-    }, 1000 * 60 * 5) // 5 mins
   }
 
   destroyWindow (evt) {
