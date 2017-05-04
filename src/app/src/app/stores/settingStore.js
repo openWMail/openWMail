@@ -4,7 +4,6 @@ const {
   Settings: {
     AppSettings,
     LanguageSettings,
-    NewsSettings,
     OSSettings,
     ProxySettings,
     TraySettings,
@@ -19,7 +18,6 @@ class SettingStore {
     // Build the current data
     this.app = new AppSettings(persistence.getJSONItem('app', {}))
     this.language = new LanguageSettings(persistence.getJSONItem('language', {}))
-    this.news = new NewsSettings(persistence.getJSONItem('news', {}))
     this.os = new OSSettings(persistence.getJSONItem('os', {}))
     this.proxy = new ProxySettings(persistence.getJSONItem('proxy', {}))
     this.tray = new TraySettings(persistence.getJSONItem('tray', {}))
@@ -37,12 +35,6 @@ class SettingStore {
       this.language = new LanguageSettings(persistence.getJSONItem('language', {}))
       this.emit('changed', { })
       this.emit('changed:language', { prev: prev, next: this.language })
-    })
-    persistence.on('changed:news', () => {
-      const prev = this.news
-      this.news = new NewsSettings(persistence.getJSONItem('news', {}))
-      this.emit('changed', { })
-      this.emit('changed:news', { prev: prev, next: this.news })
     })
     persistence.on('changed:os', () => {
       const prev = this.os

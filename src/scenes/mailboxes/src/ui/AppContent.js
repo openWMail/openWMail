@@ -13,7 +13,6 @@ const UpdateCheckDialog = require('./UpdateCheckDialog')
 const { settingsStore } = require('../stores/settings')
 const MailboxWizard = require('./MailboxWizard')
 const AppWizard = require('./AppWizard')
-const NewsDialog = require('./NewsDialog')
 
 module.exports = React.createClass({
   displayName: 'AppContent',
@@ -97,7 +96,6 @@ module.exports = React.createClass({
         <DictionaryInstallHandler />
         <AppWizard />
         <MailboxWizard />
-        <NewsDialog />
         <UpdateCheckDialog />
         <MailboxComposePicker />
       </div>

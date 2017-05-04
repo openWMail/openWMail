@@ -13,7 +13,6 @@ module.exports = React.createClass({
   propTypes: {
     ui: React.PropTypes.object.isRequired,
     os: React.PropTypes.object.isRequired,
-    news: React.PropTypes.object.isRequired,
     showRestart: React.PropTypes.func.isRequired
   },
 
@@ -29,7 +28,6 @@ module.exports = React.createClass({
     const {
       ui,
       os,
-      news,
       showRestart,
       ...passProps
     } = this.props
@@ -82,11 +80,6 @@ module.exports = React.createClass({
             label='Always Start minimized'
             labelPosition='right'
             onToggle={(evt, toggled) => settingsActions.setOpenHidden(toggled)} />
-          <Toggle
-            toggled={news.showNewsInSidebar}
-            label='Always show news in sidebar'
-            labelPosition='right'
-            onToggle={(evt, toggled) => { settingsActions.setShowNewsInSidebar(toggled) }} />
         </Paper>
       </div>
     )

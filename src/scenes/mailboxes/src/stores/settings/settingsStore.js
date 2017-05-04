@@ -6,7 +6,6 @@ const {
   Settings: {
     AppSettings,
     LanguageSettings,
-    NewsSettings,
     OSSettings,
     ProxySettings,
     TraySettings,
@@ -78,7 +77,6 @@ class SettingsStore {
   constructor () {
     this.app = null
     this.language = null
-    this.news = null
     this.os = null
     this.proxy = null
     this.tray = null
@@ -106,7 +104,6 @@ class SettingsStore {
     // Load everything
     this.app = new AppSettings(persistence.getJSONItemSync('app', {}))
     this.language = new LanguageSettings(persistence.getJSONItemSync('language', {}))
-    this.news = new NewsSettings(persistence.getJSONItemSync('news', {}))
     this.os = new OSSettings(persistence.getJSONItemSync('os', {}))
     this.proxy = new ProxySettings(persistence.getJSONItemSync('proxy', {}))
     this.tray = new TraySettings(persistence.getJSONItemSync('tray', {}), this.trayDefaults)
@@ -125,7 +122,6 @@ class SettingsStore {
     switch (segment) {
       case SettingsIdent.SEGMENTS.APP: return 'app'
       case SettingsIdent.SEGMENTS.LANGUAGE: return 'language'
-      case SettingsIdent.SEGMENTS.NEWS: return 'news'
       case SettingsIdent.SEGMENTS.OS: return 'os'
       case SettingsIdent.SEGMENTS.PROXY: return 'proxy'
       case SettingsIdent.SEGMENTS.TRAY: return 'tray'
@@ -141,7 +137,6 @@ class SettingsStore {
     switch (segment) {
       case SettingsIdent.SEGMENTS.APP: return AppSettings
       case SettingsIdent.SEGMENTS.LANGUAGE: return LanguageSettings
-      case SettingsIdent.SEGMENTS.NEWS: return NewsSettings
       case SettingsIdent.SEGMENTS.OS: return OSSettings
       case SettingsIdent.SEGMENTS.PROXY: return ProxySettings
       case SettingsIdent.SEGMENTS.TRAY: return TraySettings
@@ -157,7 +152,6 @@ class SettingsStore {
     switch (segment) {
       case SettingsIdent.SEGMENTS.APP: return 'app'
       case SettingsIdent.SEGMENTS.LANGUAGE: return 'language'
-      case SettingsIdent.SEGMENTS.NEWS: return 'news'
       case SettingsIdent.SEGMENTS.OS: return 'os'
       case SettingsIdent.SEGMENTS.PROXY: return 'proxy'
       case SettingsIdent.SEGMENTS.TRAY: return 'tray'
