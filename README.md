@@ -14,6 +14,9 @@ The missing desktop client for Gmail & Google Inbox. Bringing the Gmail & Google
 
 ![Screenshot](https://raw.githubusercontent.com/openWMail/openWMail/master/.github/screenshot.png "Screenshot")
 
+### License
+
+openWMail is licensed under the [MPL 2.0](./LICENSE).
 
 ### Building from source
 
