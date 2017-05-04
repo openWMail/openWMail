@@ -31,6 +31,7 @@ class AppPrimaryMenu {
         label: 'Application',
         submenu: [
           { label: 'About', click: this._selectors.aboutDialog },
+          { label: 'Credits', click: this._selectors.creditsDialog },
           { type: 'separator' },
           { label: 'Preferences', click: this._selectors.preferences, accelerator: 'CmdOrCtrl+,' },
           { type: 'separator' },

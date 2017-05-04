@@ -124,16 +124,34 @@
     cycleWindows: () => { windowManager.focusNextWindow() },
     aboutDialog: () => {
       dialog.showMessageBox({
-        title: pkg.name,
-        message: pkg.name,
+        title: pkg.humanName,
+        message: pkg.humanName,
         detail: [
           'Version: ' + pkg.version + (pkg.prerelease ? ' prerelease' : ''),
+          'openWMail, like wmail before it, is licensed under the Mozilla Public License 2.0.',
+          '\n',
           'Made with ♥ by openWMail Community.'
         ].join('\n'),
         buttons: [ 'Done', 'Website' ]
       }, (index) => {
         if (index === 1) {
           shell.openExternal(constants.GITHUB_URL)
+        }
+      })
+    },
+    creditsDialog: () => {
+      dialog.showMessageBox({
+        title: pkg.humanName,
+        message: 'Credits',
+        detail: [
+          'The community project known as openWMail would not be possible without the many years of tireless work by Thomas Beverley (Thomas101 on GitHub) on the original wmail. His hundreds of commits & thousands of lines of code, days and nights spent reproducing bugs, and commitment to this community are manifested in the polished product with which we were able to begin.',
+          '\n',
+          'Thanks again Thomas!'
+        ].join('\n'),
+        buttons: [ 'Done', 'Thomas101 on GitHub' ]
+      }, (index) => {
+        if (index === 1) {
+          shell.openExternal(constants.THOMAS_URL)
         }
       })
     },

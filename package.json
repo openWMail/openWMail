@@ -1,5 +1,6 @@
 {
   "name": "openwmail",
+  "humanName": "openWMail",
   "version": "1.0.0",
   "prerelease": true,
   "description": "The missing desktop client for Gmail and Google Inbox",
