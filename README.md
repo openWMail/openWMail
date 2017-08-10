@@ -8,11 +8,25 @@ An always free, always open-source fork of [wmail](https://github.com/Thomas101/
 
 The missing desktop client for Gmail & Google Inbox. Bringing the Gmail & Google Inbox experience to your desktop in a neatly packaged app
 
-[Download releases](https://github.com/openWMail/openWMail/releases) (all platforms)
-
 [Raise an issue or request a feature](https://github.com/openWMail/openWMail/issues)
 
 ![Screenshot](https://raw.githubusercontent.com/openWMail/openWMail/master/.github/screenshot.png "Screenshot")
+
+### Installing
+openWMail is available on Windows, Mac OSX, and Linux
+
+[Download releases](https://github.com/openWMail/openWMail/releases)
+
+#### Snap Install
+```
+sudo snap install openwmail
+```
+
+#### Arch
+openWMail is also available in the [Arch AUR](https://aur.archlinux.org/packages/openwmail/).  Installable with your favorite aur package manager.
+```
+sudo yoaurt -S openwmail
+```
 
 ### License
 
