@@ -25,7 +25,7 @@ sudo snap install openwmail
 #### Arch
 openWMail is also available in the [Arch AUR](https://aur.archlinux.org/packages/openwmail/).  Installable with your favorite aur package manager.
 ```
-sudo yoaurt -S openwmail
+sudo yaourt -S openwmail
 ```
 
 ### License
