@@ -19,7 +19,8 @@
     "dev:app": "webpack --task=app && electron bin/app/index.js",
     "dev:mailboxes": "webpack --task=mailboxes && electron bin/app/index.js",
     "dev:assets": "webpack --task=assets && electron bin/app/index.js",
-    "dev:run": "electron bin/app/index.js"
+    "dev:run": "electron bin/app/index.js",
+    "clean": "rimraf \"node_modules/!(rimraf|.bin)\""
   },
   "keywords": [],
   "author": {
@@ -45,7 +46,7 @@
     "css-loader": "0.26.1",
     "electron": "1.8.8",
     "extract-zip": "=1.6.7",
-    "electron-packager": "8.5.1",
+    "electron-packager": "12.2.0",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.10.0",
     "json-loader": "0.5.4",
