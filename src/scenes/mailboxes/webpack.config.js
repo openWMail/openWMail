@@ -76,7 +76,7 @@ const options = {
         ],
         query: {
           cacheDirectory: true,
-          presets: ['react', 'stage-0', 'es2015']
+          presets: ['react', 'stage-0', 'env']
         }
       },
       {

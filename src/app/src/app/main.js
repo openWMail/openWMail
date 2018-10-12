@@ -1,4 +1,9 @@
 ;(function () {
+
+  var realFs = require('fs')
+  var gracefulFs = require('graceful-fs')
+  gracefulFs.gracefulify(realFs)
+
   const {ipcMain, dialog, app, shell} = require('electron')
 
   let windowManager
