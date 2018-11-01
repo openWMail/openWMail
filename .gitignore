@@ -13,3 +13,7 @@ prime
 stage
 *.snap
 *.log
+
+*.sublime-project
+
+*.sublime-workspace
