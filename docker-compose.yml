@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  node:
+    build: docker/node
+    working_dir: /srv
+    volumes:
+      - .:/srv
+      # Entrypoint
+      - ./docker/node/entrypoint-node.sh:/usr/local/bin/entrypoint.sh:ro
+    entrypoint: entrypoint.sh
