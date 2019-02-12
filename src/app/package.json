@@ -17,14 +17,14 @@
     "jquery": "3.1.1",
     "minivents": "2.0.2",
     "mkdirp": "0.5.1",
+    "nodehun": "2.0.12",
     "node-fetch": "1.6.3",
     "os-locale": "2.0.0",
     "request": "2.88.0",
     "unused-filename": "0.1.0",
     "uuid": "3.0.1",
     "windows-shortcuts": "openWMail/windows-shortcuts#0.1.4",
-    "wmail-spellchecker": "openWMail/wmail-spellchecker#1.0.5",
-    "write-file-atomic": "git://github.com/geekgonecrazy/write-file-atomic.git#5be21f07e36664e47a7e342c26d8ee93424b5f42",
+    "write-file-atomic": "https://github.com/geekgonecrazy/write-file-atomic.git#v1.3.4",
     "yargs": "6.6.0"
   },
   "devDependencies": {

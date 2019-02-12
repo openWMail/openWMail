@@ -69,7 +69,6 @@ const options = {
       {
         test: /(\.jsx|\.js)$/,
         loader: 'babel',
-        exclude: /node_modules/,
         include: [
           __dirname,
           path.resolve(path.join(__dirname, '../../shared'))
