@@ -24,7 +24,7 @@
     "unused-filename": "0.1.0",
     "uuid": "3.0.1",
     "windows-shortcuts": "openWMail/windows-shortcuts#0.1.4",
-    "write-file-atomic": "https://github.com/geekgonecrazy/write-file-atomic.git#v1.3.4",
+    "write-file-atomic": "^3.0.0",
     "yargs": "6.6.0"
   },
   "devDependencies": {
