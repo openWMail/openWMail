@@ -11,6 +11,9 @@ const GoogleMailboxMailTab = require('./Google/GoogleMailboxMailTab')
 const GoogleMailboxNotesTab = require('./Google/GoogleMailboxNotesTab')
 const GoogleMailboxStorageTab = require('./Google/GoogleMailboxStorageTab')
 const GoogleMailboxCommunicationTab = require('./Google/GoogleMailboxCommunicationTab')
+const GoogleMailboxMeetTab = require('./Google/GoogleMailboxMeetTab')
+const GoogleMailboxChatTab = require('./Google/GoogleMailboxChatTab')
+const GoogleMailboxMapsTab = require('./Google/GoogleMailboxMapsTab')
 
 module.exports = React.createClass({
   displayName: 'MailboxWindows',
@@ -88,6 +91,9 @@ module.exports = React.createClass({
         case Mailbox.SERVICES.NOTES: return (<GoogleMailboxNotesTab mailboxId={mailboxId} key={key} />)
         case Mailbox.SERVICES.STORAGE: return (<GoogleMailboxStorageTab mailboxId={mailboxId} key={key} />)
         case Mailbox.SERVICES.COMMUNICATION: return (<GoogleMailboxCommunicationTab mailboxId={mailboxId} key={key} />)
+        case Mailbox.SERVICES.MEET: return (<GoogleMailboxMeetTab mailboxId={mailboxId} key={key} />)
+        case Mailbox.SERVICES.CHAT: return (<GoogleMailboxChatTab mailboxId={mailboxId} key={key} />)
+        case Mailbox.SERVICES.MAPS: return (<GoogleMailboxMapsTab mailboxId={mailboxId} key={key} />)
       }
     }
 

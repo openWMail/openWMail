@@ -16,6 +16,9 @@ SERVICE_URLS[SERVICES.CONTACTS] = 'https://contacts.google.com'
 SERVICE_URLS[SERVICES.NOTES] = 'https://keep.google.com'
 SERVICE_URLS[SERVICES.CALENDAR] = 'https://calendar.google.com'
 SERVICE_URLS[SERVICES.COMMUNICATION] = 'https://hangouts.google.com'
+SERVICE_URLS[SERVICES.MEET] = 'https://meet.google.com'
+SERVICE_URLS[SERVICES.CHAT] = 'https://chat.google.com'
+SERVICE_URLS[SERVICES.MAPS] = 'https://www.google.com/maps'
 
 const SERVICE_NAMES = { }
 SERVICE_NAMES[SERVICES.STORAGE] = 'Drive'
@@ -23,6 +26,9 @@ SERVICE_NAMES[SERVICES.CONTACTS] = 'Contacts'
 SERVICE_NAMES[SERVICES.NOTES] = 'Notes'
 SERVICE_NAMES[SERVICES.CALENDAR] = 'Calendar'
 SERVICE_NAMES[SERVICES.COMMUNICATION] = 'Hangouts'
+SERVICE_NAMES[SERVICES.MEET] = 'Meet'
+SERVICE_NAMES[SERVICES.CHAT] = 'Chat'
+SERVICE_NAMES[SERVICES.MAPS] = 'Maps'
 
 class Google extends Model {
 
