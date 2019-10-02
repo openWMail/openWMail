@@ -1,5 +1,7 @@
 # openWMail
 
+**NOTE: Unable to authenticate new Google Accounts due to an issue with Google removing a needed oauth scope.  [More info here](https://github.com/openWMail/openWMail/issues/63)**
+
 An always free, always open-source fork of [wmail](https://github.com/Thomas101/wmail) maintained by a volunteer community.
 
 [![Rocket.Chat](https://openwmail.rocket.chat/api/v1/shield.svg?type=channel&channel=general)](https://openwmail.rocket.chat/channel/general)
