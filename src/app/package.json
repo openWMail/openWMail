@@ -13,7 +13,7 @@
     "gmail-js": "0.6.8",
     "googleapis": "16.1.0",
     "home-dir": "1.0.0",
-    "https-proxy-agent": "1.0.0",
+    "https-proxy-agent": "3.0.1",
     "jquery": "3.1.1",
     "minivents": "2.0.2",
     "mkdirp": "0.5.1",
