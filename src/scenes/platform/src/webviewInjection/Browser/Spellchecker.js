@@ -5,10 +5,10 @@ const elconsole = require('../elconsole')
 
 let Nodehun
 try {
-  Nodehun = require('../../../../app/node_modules/wmail-spellchecker')
+  Nodehun = require('../../../../app/node_modules/nodehun')
 } catch (ex) {
   elconsole.error('Failed to initialize spellchecker', ex)
-  throw ex
+  Nodehun = null
 }
 
 class Spellchecker {

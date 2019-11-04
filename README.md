@@ -64,6 +64,7 @@ Then run the following...
 ```
 npm install webpack -g
 npm run-script install-all
+npm run-script rebuild:electron
 npm start
 ```
 

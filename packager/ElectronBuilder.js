@@ -2,6 +2,8 @@ const packager = require('electron-packager')
 const TaskLogger = require('./TaskLogger')
 const path = require('path')
 const { ROOT_PATH } = require('./constants')
+const { rebuild } = require('electron-rebuild')
+const { serialHooks } = require('electron-packager/hooks')
 
 const PLATFORM_ARCHES = {
   darwin: ['x64'],
@@ -43,19 +45,7 @@ class ElectronBuilder {
       '/openWMail-darwin-x64'
     ]
 
-    // Spellchecker
-    const wmailSpellcheckerPath = path.join(ROOT_PATH, 'bin/app/node_modules/wmail-spellchecker')
-    const wmailSpellchecker = require(path.join(wmailSpellcheckerPath, 'package.json'))
-    const wmailSpellcheckerIgnores = Object.keys(wmailSpellchecker.wmailPlatformCode)
-      .map((platformArch) => `${platform}_${arch}` === platformArch ? undefined : platformArch)
-      .filter((platformArch) => !!platformArch)
-      .map((platformArch) => {
-        const ignorePath = path.join(wmailSpellcheckerPath, wmailSpellchecker.wmailPlatformCode[platformArch])
-        return '/' + path.relative(ROOT_PATH, ignorePath)
-      })
-
-    const allIgnores = ignores.concat(wmailSpellcheckerIgnores)
-    return '^(' + allIgnores.join('|') + ')'
+    return '^(' + ignores.join('|') + ')'
   }
 
   /**
@@ -89,7 +79,14 @@ class ElectronBuilder {
         'extend-info': {
           'CFBundleURLSchemes': ['mailto']
         },
-        ignore: ElectronBuilder.packagerIgnoreString(platform, arch)
+        ignore: ElectronBuilder.packagerIgnoreString(platform, arch),
+        tmpdir: false,
+        afterCopy: [serialHooks([
+          (buildPath, electronVersion, platform, arch) => {
+            const buildNativePath = path.join(buildPath, 'bin/app')
+            rebuild({ buildNativePath, electronVersion, arch })
+          }
+        ])]
       }, function (err, appPath) {
         if (err) {
           reject(err)

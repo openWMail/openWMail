@@ -69,14 +69,13 @@ const options = {
       {
         test: /(\.jsx|\.js)$/,
         loader: 'babel',
-        exclude: /node_modules/,
         include: [
           __dirname,
           path.resolve(path.join(__dirname, '../../shared'))
         ],
         query: {
           cacheDirectory: true,
-          presets: ['react', 'stage-0', 'es2015']
+          presets: ['react', 'stage-0', 'env']
         }
       },
       {
