@@ -14,7 +14,7 @@
     "https-proxy-agent": "1.0.0",
     "material-ui": "0.17.0",
     "minivents": "2.0.2",
-    "qs": "6.3.1",
+    "qs": "6.9.3",
     "querystring": "0.2.0",
     "react": "15.4.2",
     "react-addons-shallow-compare": "15.4.2",
